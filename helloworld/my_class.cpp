@@ -1,6 +1,6 @@
+#include "my_class.h"
 #include <iostream>
 
-int main()
-{
+void MyClass::say_hi() {
   std::cout << "Hello World!\n";
 }
