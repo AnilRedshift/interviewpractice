@@ -1,9 +1,5 @@
-#include "./range.h";
+#include "./range.h"
 
-float max_trade(const DAY_INFO* const days) {
-  return 2;
-}
-
-int main() {
-  max_trade(nullptr);
+float max_trade(const std::vector<DAY_INFO>& days) {
+  return 0.0;
 }
