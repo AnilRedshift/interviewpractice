@@ -1,5 +1,5 @@
-#ifndef INTRODUCTON_RANGE_H_
-#define INTRODUCTON_RANGE_H_
+#ifndef INTRODUCTION_RANGE_H_
+#define INTRODUCTION_RANGE_H_
   typedef struct DAY_INFO {
     float open;
     float min;
@@ -7,4 +7,4 @@
   } DAY_INFO;
 
   float max_trade(const DAY_INFO* const days);
-#endif // INTRODUCTON_RANGE_H_
+#endif  // INTRODUCTION_RANGE_H_
