@@ -5,14 +5,19 @@
   Must be done on the open of the day
 */
 float max_trade(const std::vector<DAY_INFO>& days) {
+  float min_open;
   float best_profit = 0.0;
-  for (std::vector<DAY_INFO>::size_type i = 0; i < days.size(); i++) {
-    const float buy_price = days[i].open;
-    for (std::vector<DAY_INFO>::size_type j = i; j < days.size(); j++) {
-      const float sell_price = days[j].open;
-      const float profit = sell_price - buy_price;
-      best_profit = profit > best_profit ? profit : best_profit;
+  bool first = true;
+  for (auto const& day : days) {
+    if (first) {
+      first = false;
+      min_open = day.open;
+      continue;
     }
+
+    const float profit = day.open - min_open;
+    best_profit = profit > best_profit ? profit : best_profit;
+    min_open = day.open < min_open ? day.open : min_open;
   }
   return best_profit;
 }
